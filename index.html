@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptocurrency Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="left-nav">
+            <a href="index.html" class="title">CRYPTO TRACKER</a>
+        </div>
+        <div class="right-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="favorites.html" class="nav-link">Liked Coins</a>
+            <div class="search-container">
+                <input type="text" id="search-box" placeholder="Search Coins..."  autocomplete="off">
+                <i class="fas fa-search" id="search-icon"></i>
+                <div class="dialog-box" id="search-dialog">
+                    <div class="dialog-content">
+                        <span id="close-dialog" class="close-btn">&times;</span>
+                        <h3>Search Results</h3>
+                        <ul id="search-results">
+                            <!-- Search results will be populated here -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <table id="crypto-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Icon</th>
+                    <th>Name</th>
+                    <th>Price
+                        <i id="sort-price-asc" class="fas fa-arrow-up"></i>
+                        <i id="sort-price-desc" class="fas fa-arrow-down"></i>
+                    </th>
+                    <th>Volume
+                        <i id="sort-volume-asc" class="fas fa-arrow-up"></i>
+                        <i id="sort-volume-desc" class="fas fa-arrow-down"></i>
+                    </th>
+                    <th>Market Cap
+                        <i id="sort-market-asc" class="fas fa-arrow-up sort-icon" title="Sort by market ascending"></i>
+                        <i id="sort-market-desc" class="fas fa-arrow-down sort-icon" title="Sort by market descending"></i>
+                    </th>
+                    <th>Favorite</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table content will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+        <div id="pagination-controls">
+            <button id="prev-button" disabled>Prev</button>
+            <button id="next-button">Next</button>
+        </div>
+        <div class="shimmer-container">
+            <div class="shimmer"></div>
+        </div> <!-- Added shimmer container -->
+    </main>
+   
+    <script src="app.js"></script>
+</body>
+</html>
